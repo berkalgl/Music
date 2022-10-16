@@ -1,0 +1,12 @@
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\bin\Debug\net6.0\Jam.Domain.deps.json
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\bin\Debug\net6.0\Jam.Domain.dll
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\bin\Debug\net6.0\Jam.Domain.pdb
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.csproj.AssemblyReference.cache
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.AssemblyInfoInputs.cache
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.AssemblyInfo.cs
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.csproj.CoreCompileInputs.cache
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.dll
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\refint\Jam.Domain.dll
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\Jam.Domain.pdb
+D:\Dev\git\Music\src\Services\Jam\Jam.Domain\obj\Debug\net6.0\ref\Jam.Domain.dll

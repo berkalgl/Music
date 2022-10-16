@@ -1,0 +1,12 @@
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\bin\Debug\net6.0\MessagesAndEvents.deps.json
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\bin\Debug\net6.0\MessagesAndEvents.dll
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\bin\Debug\net6.0\MessagesAndEvents.pdb
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.csproj.AssemblyReference.cache
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.AssemblyInfoInputs.cache
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.AssemblyInfo.cs
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.csproj.CoreCompileInputs.cache
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.dll
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\refint\MessagesAndEvents.dll
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\MessagesAndEvents.pdb
+D:\Dev\git\Music\src\MessagesAndEvents\MessagesAndEvents\obj\Debug\net6.0\ref\MessagesAndEvents.dll

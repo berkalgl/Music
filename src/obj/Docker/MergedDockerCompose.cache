@@ -1,0 +1,46 @@
+services:
+  jam.api:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/Jam/Jam.API/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: jamapi
+    ports:
+    - published: 5103
+      target: 80
+    - target: 80
+  mail.backgroundtasks:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/Mail/Mail.BackgroundTasks/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    image: mailbackgroundtasks
+    stdin_open: true
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+  user.api:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/User/User.API/Dockerfile
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: userapi
+    ports:
+    - published: 5101
+      target: 80
+    - target: 80
+version: '3.4'

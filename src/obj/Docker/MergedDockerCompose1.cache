@@ -1,0 +1,112 @@
+services:
+  jam.api:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/Jam/Jam.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Jam.API
+      target: base
+    container_name: Jam.API
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: jamapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Jam.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 5103
+      target: 80
+    - target: 80
+    tty: true
+    volumes:
+    - D:\Dev\git\Music\src\Services\Jam\Jam.API:/app:rw
+    - C:\Users\TCBALGUL.TURKCELL\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\TCBALGUL.TURKCELL\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\TCBALGUL.TURKCELL\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\TCBALGUL.TURKCELL\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Dev\git\Music\src:/src:rw
+  mail.backgroundtasks:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/Mail/Mail.BackgroundTasks/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Mail.BackgroundTasks
+      target: base
+    container_name: Mail.BackgroundTasks
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: ''
+    image: mailbackgroundtasks:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/Mail.BackgroundTasks.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    stdin_open: true
+    tty: true
+    volumes:
+    - D:\Dev\git\Music\src\Services\Mail\Mail.BackgroundTasks:/app:rw
+    - C:\Users\TCBALGUL.TURKCELL\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\TCBALGUL.TURKCELL\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Dev\git\Music\src:/src:rw
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    ports:
+    - published: 5672
+      target: 5672
+    - published: 15672
+      target: 15672
+  user.api:
+    build:
+      context: D:\Dev\git\Music\src
+      dockerfile: Services/User/User.API/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: User.API
+      target: base
+    container_name: User.API
+    depends_on:
+      rabbitmq:
+        condition: service_started
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: userapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/User.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 5101
+      target: 80
+    - target: 80
+    tty: true
+    volumes:
+    - D:\Dev\git\Music\src\Services\User\User.API:/app:rw
+    - C:\Users\TCBALGUL.TURKCELL\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\TCBALGUL.TURKCELL\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\TCBALGUL.TURKCELL\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\TCBALGUL.TURKCELL\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Dev\git\Music\src:/src:rw
+version: '3.4'

@@ -1,0 +1,15 @@
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\bin\Debug\net6.0\Music.Infrastructure.deps.json
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\bin\Debug\net6.0\Music.Infrastructure.dll
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\bin\Debug\net6.0\Music.Infrastructure.pdb
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\bin\Debug\net6.0\Music.Domain.dll
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\bin\Debug\net6.0\Music.Domain.pdb
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.csproj.AssemblyReference.cache
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.AssemblyInfoInputs.cache
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.AssemblyInfo.cs
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.csproj.CopyComplete
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.dll
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\refint\Music.Infrastructure.dll
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\Music.Infrastructure.pdb
+D:\Dev\git\Music\src\Services\Music\Music.Infrastructure\obj\Debug\net6.0\ref\Music.Infrastructure.dll

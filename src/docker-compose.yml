@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.10-management
+    ports:
+     - "5672:5672"
+     - "15672:15672"
+
+  jam.api:
+    image: ${DOCKER_REGISTRY-}jamapi
+    build:
+      context: .
+      dockerfile: Services/Jam/Jam.API/Dockerfile
+    ports:
+      - "5110:80"
+    depends_on:
+     - rabbitmq
+
+  user.api:
+    image: ${DOCKER_REGISTRY-}userapi
+    build:
+      context: .
+      dockerfile: Services/User/User.API/Dockerfile
+    ports:
+      - "5111:80"
+    depends_on:
+     - rabbitmq
+     
+  mail.backgroundtasks:
+    image: ${DOCKER_REGISTRY-}mailbackgroundtasks
+    stdin_open: true # docker run -i
+    build:
+      context: .
+      dockerfile: Services/Mail/Mail.BackgroundTasks/Dockerfile
+    depends_on:
+     - rabbitmq

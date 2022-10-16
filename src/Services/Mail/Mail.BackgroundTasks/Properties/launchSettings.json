@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Mail.BackgroundTasks": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

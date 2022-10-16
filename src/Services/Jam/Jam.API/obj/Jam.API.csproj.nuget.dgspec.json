@@ -1,0 +1,289 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
+        "projectName": "MessagesAndEvents",
+        "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
+        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj",
+        "projectName": "Jam.API",
+        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj",
+        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
+                "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj"
+              },
+              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
+                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj"
+              },
+              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj": {
+                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.23.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj",
+        "projectName": "Jam.Domain",
+        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj",
+        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj",
+        "projectName": "Jam.Infrastructure",
+        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
+                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
