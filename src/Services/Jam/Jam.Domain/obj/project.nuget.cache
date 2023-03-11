@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0k7BhLNQNwBXS8opK0P0vU6fMa7oOnQ9r3fwaEyJMH3TpfM54QxlyCZlHtK42qLtfpsL3mKndx5v4hHYumvPXQ==",
+  "dgSpecHash": "neCPJ/s9YE2csf7/cJqHpUsDQPvBJJPLGHyaPdcDBZKieFRJ4FXyRQhHw579UJO9YN2QHjx9uwc03RX7pLmeLw==",
   "success": true,
-  "projectFilePath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj",
+  "projectFilePath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

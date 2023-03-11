@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\git\\Music\\src\\Services\\User\\User.UnitTests\\User.UnitTests.csproj": {}
+    "/Users/balgul/repos/Music/src/Services/User/User.UnitTests/User.UnitTests.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
+    "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj",
         "projectName": "MessagesAndEvents",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,42 +53,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\User.API.csproj": {
+    "/Users/balgul/repos/Music/src/Services/User/User.API/User.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\User.API.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/User/User.API/User.API.csproj",
         "projectName": "User.API",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\User.API.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.API/User.API.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/User/User.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj"
+              "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj"
               },
-              "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj"
+              "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj"
               },
-              "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\User.Infrastructure.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\User.Infrastructure.csproj"
+              "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/User.Infrastructure.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/User.Infrastructure.csproj"
               }
             }
           }
@@ -157,28 +153,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj": {
+    "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj",
         "projectName": "User.Domain",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/User/User.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -212,36 +206,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\User.Infrastructure.csproj": {
+    "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/User.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\User.Infrastructure.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/User.Infrastructure.csproj",
         "projectName": "User.Infrastructure",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\User.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Infrastructure\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/User.Infrastructure.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/User/User.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.Domain\\User.Domain.csproj"
+              "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.Domain/User.Domain.csproj"
               }
             }
           }
@@ -281,36 +273,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\User\\User.UnitTests\\User.UnitTests.csproj": {
+    "/Users/balgul/repos/Music/src/Services/User/User.UnitTests/User.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.UnitTests\\User.UnitTests.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/User/User.UnitTests/User.UnitTests.csproj",
         "projectName": "User.UnitTests",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.UnitTests\\User.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.UnitTests\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.UnitTests/User.UnitTests.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/User/User.UnitTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\User.API.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\User\\User.API\\User.API.csproj"
+              "/Users/balgul/repos/Music/src/Services/User/User.API/User.API.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/User/User.API/User.API.csproj"
               }
             }
           }
@@ -370,7 +360,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -32,7 +32,7 @@ namespace User.API.Application.Commands
         {
             _logger.LogInformation($"Checking user with id {request.UserId} has the role...");
 
-            var user = await _userProfileRepository.GetAsync(request.UserId);
+            var user = await _userProfileRepository.GetByAsync(request.UserId);
 
             if (user == null)
             {

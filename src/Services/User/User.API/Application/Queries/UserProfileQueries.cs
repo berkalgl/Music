@@ -1,4 +1,5 @@
-﻿using User.API.Application.Models;
+﻿using User.API.Application.Enums;
+using User.API.Application.Models;
 using User.Domain.AggregatesModel.UserProfileAggregate;
 
 namespace User.API.Application.Queries
@@ -12,20 +13,14 @@ namespace User.API.Application.Queries
             _userProfileRepository = userProfileRepository;
         }
 
+        public async Task<UserProfileResponse> GetUserProfileAsync(int id)
+        {
+            return UserProfileResponse.FromUserProfile(await _userProfileRepository.GetByAsync(id));
+        }
+
         public async Task<UserProfileResponse> ValidateUserAsync(string email, string password)
         {
-            return MapUserProfile(await _userProfileRepository.FindBy(email, password));
-        }
-        private static UserProfileResponse MapUserProfile(UserProfile userProfile)
-        {
-            if (userProfile == null)
-                return new UserProfileResponse();
-
-            return new UserProfileResponse()
-            {
-                Id = userProfile.Id,
-                Role = userProfile.UserType
-            };
+            return UserProfileResponse.FromUserProfile(await _userProfileRepository.GetByAsync(email, password));
         }
     }
 }

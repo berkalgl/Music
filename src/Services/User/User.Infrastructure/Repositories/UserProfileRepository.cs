@@ -13,12 +13,12 @@ namespace User.Infrastructure.Repositories
         {
             _context = context;
         }
-        public UserProfile Add(UserProfile userProfile)
+        public async Task<UserProfile> AddAsync(UserProfile userProfile)
         {
-            if(userProfile.IsTransient())
-                return _context.UserProfiles.Add(userProfile).Entity;
+            if (!userProfile.IsTransient()) return userProfile;
+            var result = await _context.UserProfiles.AddAsync(userProfile);
+            return result.Entity;
 
-            return userProfile;
         }
         public UserProfile Update(UserProfile userProfile)
         {
@@ -26,15 +26,15 @@ namespace User.Infrastructure.Repositories
                     .Update(userProfile)
                     .Entity;
         }
-        public async Task<UserProfile> FindBy(string email)
+        public async Task<UserProfile> GetByAsync(string email)
         {
             return await _context.UserProfiles.Include(up => up.BandRoles).SingleOrDefaultAsync(up => up.Email.Equals(email));
         }
-        public async Task<UserProfile> FindBy(string email, string password)
+        public async Task<UserProfile> GetByAsync(string email, string password)
         {
             return await _context.UserProfiles.SingleOrDefaultAsync(up => up.Email.Equals(email) && up.Password.Equals(password));
         }
-        public async Task<UserProfile> GetAsync(int id)
+        public async Task<UserProfile> GetByAsync(int id)
         {
             var userProfile = await _context.UserProfiles.FirstOrDefaultAsync(o => o.Id == id);
             userProfile ??= _context.UserProfiles.Local.FirstOrDefault(o => o.Id == id);

@@ -7,12 +7,13 @@ namespace User.Domain.AggregatesModel.UserProfileAggregate
         // DDD Patterns comment
         // Using private fields, allowed since EF Core 1.1, is a much better encapsulation
         // aligned with DDD Aggregates and Domain Entities (Instead of properties and property collections)
-        public string Email { get; private set; }
-        public string Password { get; private set; }
+        public string Email { get; }
+        public string Password { get; }
         public string UserType { get; private set; }
         private readonly List<UserBandRole> _bandRoles;
         public IReadOnlyCollection<UserBandRole> BandRoles => _bandRoles;
-        protected UserProfile()
+
+        private UserProfile()
         {
             _bandRoles = new List<UserBandRole>();
         }
@@ -24,7 +25,7 @@ namespace User.Domain.AggregatesModel.UserProfileAggregate
         }
         public UserProfile AddBandRoleType(int bandRoleTypeId)
         {
-            var existingBandRoleInUserProfile = _bandRoles.Where(b => b.RoleTypeId == bandRoleTypeId).SingleOrDefault();
+            var existingBandRoleInUserProfile = _bandRoles.Where(b => b.RoleTypeId == bandRoleTypeId)?.SingleOrDefault();
 
             if (existingBandRoleInUserProfile == null)
             {
@@ -35,7 +36,13 @@ namespace User.Domain.AggregatesModel.UserProfileAggregate
         }
         public bool HasTheRole(int preferredRoleTypeId)
         {
-            return _bandRoles.Where(br => br.RoleTypeId == preferredRoleTypeId).Any();
+            return _bandRoles.Any(br => br.RoleTypeId == preferredRoleTypeId);
+        }
+
+        public UserProfile UpdateUserType(string role)
+        {
+            UserType = role;
+            return this;
         }
     }
 }

@@ -6,16 +6,19 @@ using System.Net;
 using User.API.Application.Commands;
 using User.API.Application.Enums;
 using User.API.Application.Models;
+using User.API.Application.Queries;
 using User.API.Controllers;
 
 namespace User.UnitTests.Application
 {
     public class UserProfileWebApiTest
     {
+        private readonly Mock<IUserProfileQueries> _userProfileQueriesMock;
         private readonly Mock<IMediator> _mediatorMock;
         private readonly Mock<ILogger<UserProfileController>> _loggerMock;
         public UserProfileWebApiTest()
         {
+            _userProfileQueriesMock = new Mock<IUserProfileQueries>();
             _mediatorMock = new Mock<IMediator>();
             _loggerMock = new Mock<ILogger<UserProfileController>>();
         }
@@ -24,14 +27,14 @@ namespace User.UnitTests.Application
         {
             //Arrange
             _mediatorMock.Setup(x => x.Send(It.IsAny<CreateUserProfileCommand>(), default))
-                .Returns(Task.FromResult(true));
+                .Returns(Task.FromResult(new UserProfileResponse()));
             //Act
-            var userProfileController = new UserProfileController(_mediatorMock.Object, _loggerMock.Object);
+            var userProfileController = new UserProfileController(_mediatorMock.Object, _loggerMock.Object, _userProfileQueriesMock.Object);
             var actionResult = await userProfileController
-                .CreateUserProfileAsync(new CreateUserProfileRequest { 
+                .Add(new CreateUserProfileRequest { 
                     Email = It.IsAny<string>(), 
                     Password = It.IsAny<string>(), 
-                    UserType = It.IsAny<UserRoleEnum>(), 
+                    Role = It.IsAny<UserRoleEnum>(), 
                     BandRoleTypes = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist } }
                 ) as OkResult;
 
@@ -44,15 +47,15 @@ namespace User.UnitTests.Application
         {
             //Arrange
             _mediatorMock.Setup(x => x.Send(It.IsAny<CreateUserProfileCommand>(), default))
-                .Returns(Task.FromResult(false));
+                .Returns(Task.FromResult(new UserProfileResponse()));
             //Act
-            var userProfileController = new UserProfileController(_mediatorMock.Object, _loggerMock.Object);
+            var userProfileController = new UserProfileController(_mediatorMock.Object, _loggerMock.Object, _userProfileQueriesMock.Object);
             var actionResult = await userProfileController
-                .CreateUserProfileAsync(new CreateUserProfileRequest
+                .Add(new CreateUserProfileRequest
                 {
                     Email = It.IsAny<string>(),
                     Password = It.IsAny<string>(),
-                    UserType = It.IsAny<UserRoleEnum>(),
+                    Role = It.IsAny<UserRoleEnum>(),
                     BandRoleTypes = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist }
                 }) as BadRequestResult;
 

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj": {}
+    "/Users/balgul/repos/Music/src/Services/Jam/Jam.API/Jam.API.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
+    "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj",
         "projectName": "MessagesAndEvents",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,42 +53,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj": {
+    "/Users/balgul/repos/Music/src/Services/Jam/Jam.API/Jam.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/Jam/Jam.API/Jam.API.csproj",
         "projectName": "Jam.API",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\Jam.API.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.API\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.API/Jam.API.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\MessagesAndEvents\\MessagesAndEvents\\MessagesAndEvents.csproj"
+              "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/MessagesAndEvents/MessagesAndEvents/MessagesAndEvents.csproj"
               },
-              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj"
+              "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj"
               },
-              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj"
+              "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/Jam.Infrastructure.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/Jam.Infrastructure.csproj"
               }
             }
           }
@@ -157,28 +153,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
+    "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj",
         "projectName": "Jam.Domain",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -212,36 +206,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj": {
+    "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/Jam.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj",
+        "projectUniqueName": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/Jam.Infrastructure.csproj",
         "projectName": "Jam.Infrastructure",
-        "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\Jam.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\TCBALGUL.TURKCELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Infrastructure\\obj\\",
+        "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/Jam.Infrastructure.csproj",
+        "packagesPath": "/Users/balgul/.nuget/packages/",
+        "outputPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\TCBALGUL.TURKCELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/balgul/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj": {
-                "projectPath": "D:\\Dev\\git\\Music\\src\\Services\\Jam\\Jam.Domain\\Jam.Domain.csproj"
+              "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj": {
+                "projectPath": "/Users/balgul/repos/Music/src/Services/Jam/Jam.Domain/Jam.Domain.csproj"
               }
             }
           }
@@ -281,7 +273,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.2.22477.23\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }

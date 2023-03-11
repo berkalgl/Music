@@ -6,7 +6,7 @@ using User.API.Application.Commands;
 using User.API.Application.Enums;
 using User.Domain.AggregatesModel.UserProfileAggregate;
 
-namespace User.UnitTests.Application
+namespace User.UnitTests.Application.HandlerTests
 {
     public class CheckUserRoleValidationCommandHandlerTest
     {
@@ -25,7 +25,7 @@ namespace User.UnitTests.Application
             var fakeCheckUserRoleValidationCommand = new CheckUserRoleValidationCommand(1, 1, API.Application.Enums.BandRoleTypeEnum.Vocalist);
             var cltToken = default(CancellationToken);
 
-            _userProfileRepository.Setup(userProfile => userProfile.GetAsync(It.IsAny<int>()))
+            _userProfileRepository.Setup(userProfile => userProfile.GetByAsync(It.IsAny<int>()))
                 .Returns(Task.FromResult(fakeUserWithRole()));
 
             _publishEndPoint.Setup(publishEndPoint => publishEndPoint.Publish<UserValidationRegisterJamSuccessEvent>(
@@ -44,7 +44,7 @@ namespace User.UnitTests.Application
             var fakeCheckUserRoleValidationCommand = new CheckUserRoleValidationCommand(1, 1, API.Application.Enums.BandRoleTypeEnum.Vocalist);
             var cltToken = default(CancellationToken);
 
-            _userProfileRepository.Setup(userProfile => userProfile.GetAsync(It.IsAny<int>()))
+            _userProfileRepository.Setup(userProfile => userProfile.GetByAsync(It.IsAny<int>()))
                 .Returns(Task.FromResult<UserProfile>(null));
 
             _publishEndPoint.Setup(publishEndPoint => publishEndPoint.Publish<UserValidationRegisterJamFailedEvent>(
@@ -63,7 +63,7 @@ namespace User.UnitTests.Application
             var fakeCheckUserRoleValidationCommand = new CheckUserRoleValidationCommand(1, 1, API.Application.Enums.BandRoleTypeEnum.Vocalist);
             var cltToken = default(CancellationToken);
 
-            _userProfileRepository.Setup(userProfile => userProfile.GetAsync(It.IsAny<int>()))
+            _userProfileRepository.Setup(userProfile => userProfile.GetByAsync(It.IsAny<int>()))
                 .Returns(Task.FromResult<UserProfile>(fakeUserWithNoRole()));
 
             _publishEndPoint.Setup(publishEndPoint => publishEndPoint.Publish<UserValidationRegisterJamFailedEvent>(
