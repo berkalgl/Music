@@ -20,4 +20,20 @@
     <ProjectReference Include="..\..\..\MessagesAndEvents\MessagesAndEvents\MessagesAndEvents.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Mail.BackgroundTasks.csproj.user" />
+  </ItemGroup>
+
 </Project>

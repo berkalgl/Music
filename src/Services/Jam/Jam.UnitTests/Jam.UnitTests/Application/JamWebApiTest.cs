@@ -42,7 +42,7 @@ namespace Jam.UnitTests.Application
             var actionResult = await jamController.GetJamsByStatus();
 
             //Assert
-            Assert.Equal((actionResult.Result as OkObjectResult).StatusCode, (int)HttpStatusCode.OK);
+            Assert.Equal((int)HttpStatusCode.OK, (actionResult.Result as OkObjectResult).StatusCode);
 
         }
         [Fact]
