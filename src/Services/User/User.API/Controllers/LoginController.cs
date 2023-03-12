@@ -33,7 +33,7 @@ namespace User.API.Controllers
                     return BadRequest("could not find the user!");
                 }
 
-                var claims = new Claim[]
+                var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Name, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, user.Role),

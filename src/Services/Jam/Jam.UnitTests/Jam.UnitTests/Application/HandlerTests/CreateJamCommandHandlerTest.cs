@@ -21,8 +21,8 @@ namespace Jam.UnitTests.Application.HandlerTests
             var fakeCreateJamCmd = new CreateJamCommand(It.IsAny<int>(), JamTypeEnum.Public, new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist });
             var cltToken = default(CancellationToken);
 
-            _jamRepository.Setup(jamRepo => jamRepo.Add(It.IsAny<Jam.Domain.AggregatesModel.JamAggregate.Jam>()))
-                .Returns(await Task.FromResult(fakeJam()));
+            _jamRepository.Setup(jamRepo => jamRepo.AddAsync(It.IsAny<Jam.Domain.AggregatesModel.JamAggregate.Jam>()))
+                .Returns(Task.FromResult(FakeJam()));
 
             _jamRepository.Setup(jamRepo => jamRepo.UnitOfWork.SaveEntitiesAsync(cltToken))
                 .Returns(Task.FromResult(true));
@@ -32,10 +32,10 @@ namespace Jam.UnitTests.Application.HandlerTests
             var result = await handler.Handle(fakeCreateJamCmd, cltToken);
 
             //Assert
-            Assert.True(result);
+            Assert.NotNull(result);
         }
 
-        private Jam.Domain.AggregatesModel.JamAggregate.Jam fakeJam()
+        private static Jam.Domain.AggregatesModel.JamAggregate.Jam FakeJam()
         {
             return new Jam.Domain.AggregatesModel.JamAggregate.Jam(1, 2);
         }

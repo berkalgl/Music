@@ -19,11 +19,13 @@ namespace Jam.API.Application.Commands
             _publishEndPoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
         /// <summary>
         /// Handler which processes the command when
         /// a player executes Register To Jam command
         /// </summary>
-        /// <param name="command"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<bool> Handle(RegisterToJamCommand request, CancellationToken cancellationToken)
         {

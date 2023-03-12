@@ -8,9 +8,9 @@ namespace Jam.API.Application.Commands
     // plus only being able to update the data just once, when creating the object through its constructor.
     public class RegisterToJamCommand : IRequest<bool>
     {
-        public int JamId { get; private set; }
-        public int UserId { get; private set; }
-        public BandRoleTypeEnum PreferredRole { get; private set; }
+        public int JamId { get; }
+        public int UserId { get; }
+        public BandRoleTypeEnum PreferredRole { get; }
         public RegisterToJamCommand(int jamId, int userId, BandRoleTypeEnum preferredRole) 
         {
             JamId = jamId;

@@ -9,11 +9,6 @@ namespace User.API.Application.Commands
     // plus only being able to update the data just once, when creating the object through its constructor.
     public class CreateUserProfileCommand : IRequest<UserProfileResponse>
     {
-        public static CreateUserProfileCommand FromRequest(CreateUserProfileRequest request)
-        {
-            return new CreateUserProfileCommand(request.Email, request.Password, request.Role,
-                request.BandRoleTypes);
-        }
         public string Email { get; }
         public string Password { get; }
         public UserRoleEnum UserType { get; }

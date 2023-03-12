@@ -3,24 +3,10 @@ using User.API.Application.Enums;
 
 namespace User.API.Application.Commands
 {
-    public record SendMailNotificationToUserCommand : IRequest<bool>
+    public record SendMailNotificationToUserCommand(int JamId, List<UserWithRoleItem> Users) : IRequest<bool>
     {
-        public int JamId { get; private set; }
-        public List<UserWithRoleItem> Users { get; private set; }
-        public SendMailNotificationToUserCommand(int jamId, List<UserWithRoleItem> users)
-        {
-            JamId = jamId;
-            Users = users;
-        }
+        public int JamId { get; } = JamId;
+        public List<UserWithRoleItem> Users { get; } = Users;
     }
-    public record UserWithRoleItem
-    {
-        public int UserId { get; }
-        public BandRoleTypeEnum AssignedRole { get; }
-        public UserWithRoleItem(int userId, BandRoleTypeEnum assignedRole)
-        {
-            UserId = userId;
-            AssignedRole = assignedRole;
-        }
-    }
+    public record UserWithRoleItem(int UserId, BandRoleTypeEnum AssignedRole);
 }

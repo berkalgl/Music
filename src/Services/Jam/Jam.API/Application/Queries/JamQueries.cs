@@ -11,21 +11,29 @@ namespace Jam.API.Application.Queries
         {
             _jamRepository = jamRepository;
         }
-        public async Task<IEnumerable<JamResponse>> GetJamsByStatus(JamStatusEnum jamStatus)
+        public async Task<IEnumerable<JamResponse>> GetAsync(JamStatusEnum jamStatus)
         {
-            var jams = await _jamRepository.GetJamsByStatus((int)jamStatus);
-            return MapJams(jams);
-        }
-        private IEnumerable<JamResponse> MapJams(IEnumerable<Domain.AggregatesModel.JamAggregate.Jam> jams)
-        {
+            var jams = await _jamRepository.GetByStatusAsync((int)jamStatus);
+            
             return jams
-                .Select(jam => new JamResponse() 
-                { 
-                    Id = jam.Id,
-                    AvailableRoles = jam.RoleItems.Where(ri => ri.RegisteredUserId == null).Select(ri => (BandRoleTypeEnum)ri.RoleTypeId).ToList(),
-                    CreatedHostId = jam.CreatedHostId
-                })
+                .Select(jam => 
+                    new JamResponse(
+                        jam.Id, 
+                        jam.CreatedHostId, 
+                        jam.RoleItems.Where(ri => ri.RegisteredUserId == null)
+                        .Select(ri => (BandRoleTypeEnum)ri.RoleTypeId).ToList()
+                        ))
                 .ToList();
+        }
+        public async Task<JamResponse> GetAsync(int id)
+        {
+            var jam = await _jamRepository.GetAsync(id);
+            return new JamResponse(
+                jam.Id, 
+                jam.CreatedHostId, 
+                jam.RoleItems.Where(ri => ri.RegisteredUserId == null)
+                .Select(ri => (BandRoleTypeEnum)ri.RoleTypeId).ToList()
+                );
         }
     }
 }

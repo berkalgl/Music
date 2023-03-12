@@ -45,7 +45,8 @@ namespace User.API.Controllers
         [ProducesResponseType((int) HttpStatusCode.NotFound)]
         public async Task<IActionResult> Add([FromBody] CreateUserProfileRequest request)
         {
-            var createUserProfileCommand = CreateUserProfileCommand.FromRequest(request);
+            var createUserProfileCommand = new CreateUserProfileCommand(request.Email, request.Password, request.Role, 
+                request.BandRoleTypes);
 
             _logger.LogInformation(
                 "----- Sending command: {CommandName} ({@Command})",

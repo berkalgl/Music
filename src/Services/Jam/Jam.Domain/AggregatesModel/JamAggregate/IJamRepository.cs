@@ -4,8 +4,8 @@ namespace Jam.Domain.AggregatesModel.JamAggregate
 {
     public interface IJamRepository : IRepository<Jam>
     {
-        Jam Add(Jam jam);
-        Task<Jam> GetAsync(int jamId);
-        Task<IEnumerable<Jam>> GetJamsByStatus(int statusId);
+        Task<Jam> AddAsync(Jam jam);
+        Task<Jam> GetAsync(int id);
+        Task<IEnumerable<Jam>> GetByStatusAsync(int statusId);
     }
 }

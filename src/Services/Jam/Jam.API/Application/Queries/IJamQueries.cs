@@ -5,6 +5,7 @@ namespace Jam.API.Application.Queries
 {
     public interface IJamQueries
     {
-        Task<IEnumerable<JamResponse>> GetJamsByStatus(JamStatusEnum jamStatus);
+        Task<IEnumerable<JamResponse>> GetAsync(JamStatusEnum jamStatus);
+        Task<JamResponse> GetAsync(int id);
     }
 }

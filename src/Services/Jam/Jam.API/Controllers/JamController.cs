@@ -28,16 +28,12 @@ namespace Jam.API.Controllers
             _jamQueries = jamQueries ?? throw new ArgumentNullException(nameof(jamQueries));
         }
 
-        [Route("Create")]
         [HttpPost]
         [Authorize(Roles = "Host")]
-        public async Task<IActionResult> CreateJamAsync([FromBody] CreateJamRequest createJamRequest)
+        public async Task<IActionResult> Create([FromBody] CreateJamRequest createJamRequest)
         {
-            var createJamCommand =
-                new CreateJamCommand(
-                    _identityService.GetUserId(),
-                    createJamRequest.JamType,
-                    createJamRequest.Roles);
+            var createJamCommand = new CreateJamCommand(_identityService.GetUserId(), createJamRequest.JamType,
+                createJamRequest.Roles);
 
             _logger.LogInformation(
                 "----- Sending command: {CommandName} ({@Command})",
@@ -46,29 +42,41 @@ namespace Jam.API.Controllers
 
             var commandResult = await _mediator.Send(createJamCommand);
 
-            if (!commandResult)
-            {
-                return BadRequest();
-            }
+            return CreatedAtAction(nameof(Get), new {id = commandResult.Id}, commandResult);
+        }
 
-            return Ok();
+        [Route("{id:int}")]
+        [HttpGet]
+        [Authorize(Roles = "Host")]
+        public async Task<IActionResult> Get(int id)
+        {
+            _logger.LogInformation(
+                "----- Execution Query GetJamAsync");
+            
+            var jam = await _jamQueries.GetAsync(id);
+
+            if (jam is null) return NotFound();
+
+            return Ok(jam);
         }
 
         [Route("{jamStatus}")]
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(typeof(IEnumerable<JamResponse>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<JamResponse>>> GetJamsByStatus(JamStatusEnum jamStatus = JamStatusEnum.Pending)
+        public async Task<ActionResult<IEnumerable<JamResponse>>> GetByStatus(JamStatusEnum jamStatus = JamStatusEnum.Pending)
         {
-            return Ok(await _jamQueries.GetJamsByStatus(jamStatus));
+            var jams = await _jamQueries.GetAsync(jamStatus);
+
+            return Ok(jams);
         }
 
-        [Route("Start")]
+        [Route("start")]
         [HttpPut]
         [Authorize(Roles = "Host")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> StartJamAsync([FromBody] StartJamRequest request)
+        public async Task<IActionResult> Start([FromBody] StartJamRequest request)
         {
             var command = new StartJamCommand(request.JamId, _identityService.GetUserId());
 
@@ -87,12 +95,12 @@ namespace Jam.API.Controllers
             return Ok();
         }
 
-        [Route("Register")]
+        [Route("register")]
         [HttpPut]
         [Authorize(Roles = "Player")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> RegisterToJamAsync([FromBody] RegisterToJamRequest request)
+        public async Task<IActionResult> Register([FromBody] RegisterToJamRequest request)
         {
             var command = new RegisterToJamCommand(request.JamId, _identityService.GetUserId(), request.PreferedRole);
 

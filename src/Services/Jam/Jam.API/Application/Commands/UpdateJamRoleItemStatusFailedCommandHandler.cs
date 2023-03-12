@@ -14,11 +14,13 @@ namespace Jam.API.Application.Commands
             _jamRepository = jamRepository ?? throw new ArgumentNullException(nameof(jamRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
         /// <summary>
         /// Handler which processes the command when
         /// event executes Update Jam Role Item Status Success
         /// </summary>
-        /// <param name="command"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<bool> Handle(UpdateJamRoleItemStatusFailedCommand request, CancellationToken cancellationToken)
         {
@@ -32,7 +34,7 @@ namespace Jam.API.Application.Commands
 
             var saved = await _jamRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
 
-            //throw an event RegistrationCompleted
+            //TO-DO throw an event RegistrationCompleted
 
             return saved;
         }

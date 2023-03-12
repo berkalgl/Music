@@ -2,21 +2,15 @@
 {
     public abstract class Entity
     {
-        int _Id;
+        int _id;
         public virtual int Id
         {
-            get
-            {
-                return _Id;
-            }
-            protected set
-            {
-                _Id = value;
-            }
+            get => _id;
+            protected set => _id = value;
         }
         public bool IsTransient()
         {
-            return this.Id == default(Int32);
+            return Id == default;
         }
     }
 }

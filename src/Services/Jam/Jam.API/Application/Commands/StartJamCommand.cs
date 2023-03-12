@@ -7,8 +7,8 @@ namespace Jam.API.Application.Commands
     // plus only being able to update the data just once, when creating the object through its constructor.
     public class StartJamCommand : IRequest<bool>
     {
-        public int JamId { get; private set; }
-        public int UserId { get; private set; }
+        public int JamId { get; }
+        public int UserId { get; }
         public StartJamCommand(int jamId, int userId)
         {
             JamId = jamId;

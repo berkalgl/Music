@@ -3,11 +3,11 @@ using Jam.API.Application.Enums;
 
 namespace Jam.API.Application.Models
 {
-    public record JamResponse
+    public record JamResponse(int Id, int CreatedHostId, List<BandRoleTypeEnum> AvailableRoles)
     {
-        public int Id { get; init; }
-        public int CreatedHostId { get; init; }
-        public List<BandRoleTypeEnum> AvailableRoles { get; set; }
+        public int Id { get; } = Id;
+        public int CreatedHostId { get; } = CreatedHostId;
+        public List<BandRoleTypeEnum> AvailableRoles { get; set; } = AvailableRoles;
     }
     public record StartJamRequest
     {

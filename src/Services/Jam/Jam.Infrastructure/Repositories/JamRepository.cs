@@ -12,15 +12,16 @@ namespace Jam.Infrastructure.Repositories
         {
             _context = context;
         }
-        public Domain.AggregatesModel.JamAggregate.Jam Add(Domain.AggregatesModel.JamAggregate.Jam jam)
+        public async Task<Domain.AggregatesModel.JamAggregate.Jam> AddAsync(Domain.AggregatesModel.JamAggregate.Jam jam)
         {
-            if (jam.IsTransient())
-                return _context.Jams.Add(jam).Entity;
+            if (!jam.IsTransient()) return jam;
+            
+            var added = await _context.Jams.AddAsync(jam);
+            return added.Entity;
 
-            return jam;
         }
 
-        public async Task<IEnumerable<Domain.AggregatesModel.JamAggregate.Jam>> GetJamsByStatus(int statusId)
+        public async Task<IEnumerable<Domain.AggregatesModel.JamAggregate.Jam>> GetByStatusAsync(int statusId)
         {
             var list = await _context.Jams.Where(j => j.JamStatusId.Equals(statusId))
                 .Include(j => j.RoleItems)
@@ -29,11 +30,7 @@ namespace Jam.Infrastructure.Repositories
         }
         public async Task<Domain.AggregatesModel.JamAggregate.Jam> GetAsync(int jamId)
         {
-            var jam = await _context.Jams.FirstOrDefaultAsync(o => o.Id == jamId);
-            if (jam == null)
-            {
-                jam = _context.Jams.Local.FirstOrDefault(o => o.Id == jamId);
-            }
+            var jam = await _context.Jams.FirstOrDefaultAsync(o => o.Id == jamId) ?? _context.Jams.Local.FirstOrDefault(o => o.Id == jamId);
 
             if (jam != null)
             {

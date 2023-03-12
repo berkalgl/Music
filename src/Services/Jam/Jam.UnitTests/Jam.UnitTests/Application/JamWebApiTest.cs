@@ -34,15 +34,15 @@ namespace Jam.UnitTests.Application
             _identityServiceMock.Setup(x => x.GetUserId())
                 .Returns(1);
 
-            _jamQueriesMock.Setup(x => x.GetJamsByStatus(JamStatusEnum.Pending))
+            _jamQueriesMock.Setup(x => x.GetAsync(JamStatusEnum.Pending))
                 .Returns(Task.FromResult(fakeDynamicResult));
 
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
-            var actionResult = await jamController.GetJamsByStatus();
+            var actionResult = await jamController.GetByStatus();
 
             //Assert
-            Assert.Equal((actionResult.Result as OkObjectResult).StatusCode, (int)HttpStatusCode.OK);
+            Assert.Equal((actionResult.Result as OkObjectResult)?.StatusCode, (int)HttpStatusCode.OK);
 
         }
         [Fact]
@@ -50,14 +50,15 @@ namespace Jam.UnitTests.Application
         {
             //Arrange
             _mediatorMock.Setup(x => x.Send(It.IsAny<CreateJamCommand>(), default))
-                .Returns(Task.FromResult(true));
+                .Returns(Task.FromResult(FakeJam()));
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .CreateJamAsync(new CreateJamRequest() { JamType = JamTypeEnum.Public, Roles = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist} }) as OkResult;
+                .Create(new CreateJamRequest() { JamType = JamTypeEnum.Public, Roles = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist} }) as OkResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.OK);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.OK, actionResult.StatusCode);
 
         }
         [Fact]
@@ -65,15 +66,16 @@ namespace Jam.UnitTests.Application
         {
             //Arrange
             _mediatorMock.Setup(x => x.Send(It.IsAny<CreateJamCommand>(), default))
-                .Returns(Task.FromResult(false));
+                .Returns(Task.FromResult(FakeJam()));
 
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .CreateJamAsync(new CreateJamRequest() { JamType = JamTypeEnum.Public, Roles = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist } }) as BadRequestResult;
+                .Create(new CreateJamRequest() { JamType = JamTypeEnum.Public, Roles = new List<BandRoleTypeEnum> { BandRoleTypeEnum.Vocalist } }) as BadRequestResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.BadRequest);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.BadRequest, actionResult.StatusCode);
 
         }
         [Fact]
@@ -85,10 +87,11 @@ namespace Jam.UnitTests.Application
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .StartJamAsync(new StartJamRequest { JamId = It.IsAny<int>()}) as OkResult;
+                .Start(new StartJamRequest { JamId = It.IsAny<int>()}) as OkResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.OK);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.OK, actionResult.StatusCode);
 
         }
         [Fact]
@@ -100,10 +103,11 @@ namespace Jam.UnitTests.Application
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .StartJamAsync(new StartJamRequest { JamId = It.IsAny<int>() }) as BadRequestResult;
+                .Start(new StartJamRequest { JamId = It.IsAny<int>() }) as BadRequestResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.BadRequest);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.BadRequest, actionResult.StatusCode);
 
         }
         [Fact]
@@ -115,10 +119,11 @@ namespace Jam.UnitTests.Application
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .RegisterToJamAsync(new RegisterToJamRequest { JamId = It.IsAny<int>(), PreferedRole = It.IsAny<BandRoleTypeEnum>()}) as OkResult;
+                .Register(new RegisterToJamRequest { JamId = It.IsAny<int>(), PreferedRole = It.IsAny<BandRoleTypeEnum>()}) as OkResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.OK);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.OK, actionResult.StatusCode);
 
         }
         [Fact]
@@ -130,11 +135,17 @@ namespace Jam.UnitTests.Application
             //Act
             var jamController = new JamController(_mediatorMock.Object, _loggerMock.Object, _identityServiceMock.Object, _jamQueriesMock.Object);
             var actionResult = await jamController
-                .RegisterToJamAsync(new RegisterToJamRequest { JamId = It.IsAny<int>(), PreferedRole = It.IsAny<BandRoleTypeEnum>() }) as BadRequestResult;
+                .Register(new RegisterToJamRequest { JamId = It.IsAny<int>(), PreferedRole = It.IsAny<BandRoleTypeEnum>() }) as BadRequestResult;
 
             //Assert
-            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.BadRequest);
+            Assert.NotNull(actionResult);
+            Assert.Equal((int)HttpStatusCode.BadRequest, actionResult.StatusCode);
 
+        }
+
+        private static JamResponse FakeJam()
+        {
+            return new JamResponse(1, 1, new List<BandRoleTypeEnum>() { BandRoleTypeEnum.Drummer });
         }
     }
 }

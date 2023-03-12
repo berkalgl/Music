@@ -19,11 +19,13 @@ namespace Jam.API.Application.Commands
             _publishEndPoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
         /// <summary>
         /// Handler which processes the command when
         /// a host executes Start Jam command
         /// </summary>
-        /// <param name="command"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
         /// <returns></returns>
         public async Task<bool> Handle(StartJamCommand request, CancellationToken cancellationToken)
         {
@@ -40,18 +42,17 @@ namespace Jam.API.Application.Commands
 
             _logger.LogInformation($"Starting the jam id {jamToUpdate.Id}");
 
-            if (saved)
-            {
-                _logger.LogInformation($"Publishing JamStartedEvent jam id {jamToUpdate.Id}");
-                var jamStartedEvent =
-                    new JamStartedEvent(
-                        jamToUpdate.Id, 
-                        jamToUpdate.RoleItems.Select(ri => new UserWithRoleItem((int)ri.RegisteredUserId, (BandRoleTypeEnum)ri.RoleTypeId)).ToList()
-                        );
-                await _publishEndPoint.Publish(jamStartedEvent);
-            }
+            if (!saved) return false;
+            
+            _logger.LogInformation($"Publishing JamStartedEvent jam id {jamToUpdate.Id}");
+            var jamStartedEvent =
+                new JamStartedEvent(
+                    jamToUpdate.Id, 
+                    jamToUpdate.RoleItems.Select(ri => new UserWithRoleItem((int)ri.RegisteredUserId, (BandRoleTypeEnum)ri.RoleTypeId)).ToList()
+                );
+            await _publishEndPoint.Publish(jamStartedEvent, cancellationToken);
 
-            return saved;
+            return true;
         }
     }
 }

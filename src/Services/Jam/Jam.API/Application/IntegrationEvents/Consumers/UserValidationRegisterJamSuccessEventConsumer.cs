@@ -16,12 +16,12 @@ namespace Jam.API.Application.IntegrationEvents.Consumers
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
+
         /// <summary>
         /// Event handler which handles that the user registiration failed event
         /// Therefore, the registiration will be updated. 
         /// </summary>
-        /// <param name="event">       
-        /// </param>
+        /// <param name="context"></param>
         /// <returns></returns>
         public async Task Consume(ConsumeContext<UserValidationRegisterJamSuccessEvent> context)
         {
