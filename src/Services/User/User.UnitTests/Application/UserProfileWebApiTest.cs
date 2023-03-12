@@ -39,8 +39,7 @@ namespace User.UnitTests.Application
                 ) as OkResult;
 
             //Assert
-            Assert.NotNull(actionResult);
-            Assert.Equal((int)HttpStatusCode.OK, actionResult.StatusCode);
+            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.OK);
 
         }
         [Fact]
@@ -61,8 +60,7 @@ namespace User.UnitTests.Application
                 }) as BadRequestResult;
 
             //Assert
-            Assert.NotNull(actionResult);
-            Assert.Equal((int)HttpStatusCode.BadRequest, actionResult.StatusCode);
+            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.BadRequest);
 
         }
     }

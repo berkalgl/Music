@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -33,8 +32,7 @@ namespace User.UnitTests.Application
                 .Login(new LoginRequest { Email = It.IsAny<string>(), Password = It.IsAny<string>() }) as OkObjectResult;
 
             //Assert
-            Assert.NotNull(actionResult);
-            Assert.Equal((int)HttpStatusCode.OK, actionResult.StatusCode);
+            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.OK);
 
         }
         [Fact]
@@ -51,8 +49,7 @@ namespace User.UnitTests.Application
                 .Login(new LoginRequest { Email = It.IsAny<string>(), Password = It.IsAny<string>() }) as BadRequestObjectResult;
 
             //Assert
-            Assert.NotNull(actionResult);
-            Assert.Equal((int)HttpStatusCode.BadRequest, actionResult.StatusCode);
+            Assert.Equal(actionResult.StatusCode, (int)HttpStatusCode.BadRequest);
 
         }
     }
