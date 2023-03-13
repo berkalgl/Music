@@ -11,7 +11,6 @@ using System.Net;
 namespace Jam.API.Controllers
 {
     [Route("api/v1/[controller]")]
-    [Authorize]
     [ApiController]
     public class JamController : ControllerBase
     {
@@ -29,7 +28,6 @@ namespace Jam.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Host")]
         public async Task<IActionResult> Create([FromBody] CreateJamRequest createJamRequest)
         {
             var createJamCommand = new CreateJamCommand(_identityService.GetUserId(), createJamRequest.JamType,

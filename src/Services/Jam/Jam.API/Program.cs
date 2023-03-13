@@ -4,6 +4,8 @@ using Jam.Infrastructure;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,12 +14,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddControllers(options =>
     {
-    options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+        options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+        options.Filters.Add(typeof(ValidatorActionFilter));
     })
     .AddJsonOptions(opts =>
     {
-    opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     });
+
+// Fluent Validation
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
