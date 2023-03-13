@@ -1,7 +1,0 @@
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.csproj.AssemblyReference.cache
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.AssemblyInfoInputs.cache
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.AssemblyInfo.cs
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.csproj.CoreCompileInputs.cache
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.MvcApplicationPartsAssemblyInfo.cs
-D:\Dev\git\Music\src\Services\Music\Music.API\obj\Debug\net6.0\Music.API.MvcApplicationPartsAssemblyInfo.cache
